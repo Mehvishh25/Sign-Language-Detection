@@ -47,8 +47,6 @@ while True:
             imgResizeShape=imgResize.shape
             hGap=math.ceil((imgSize-hcal)/2)
             imgWhite[hGap:hcal+hGap , : ]=imgResize
-
-        # Only show the cropped hand when a hand is detected
         cv2.imshow("Cropped Hand", imgCrop)
         cv2.imshow("ImageWhite", imgWhite)
         cv2.rectangle(imgOutput, (x - offset, y - offset-50),
